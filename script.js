@@ -20,7 +20,7 @@ let msg2 = document.getElementById('message2');
 let msg3 = document.getElementById('message3');
 
 
-let user = 3;
+let user = 2;
 
 
 
@@ -34,7 +34,7 @@ rock.addEventListener('click', function() {
        msg2.innerHTML = '<b>Computer chose sissors</b>';
        msg3.innerHTML = "<b>User WON!</b>";
         
-    } else if(user !== answer) {
+    } else {
        msg2.innerHTML = '<b>Computer chose paper</b>';
        msg3.innerHTML = "<b>Computer WON!</b>";
     }
@@ -63,7 +63,7 @@ sissors.addEventListener('click', function() {
         msg2.innerHTML = '<b>Computer chose sissors</b>';
         msg3.innerHTML = "<b>It's a TIE!</b>";
     } else if(user > answer){
-        msg2.innerHTML = '<b>Computer chose sissors</b>';
+        msg2.innerHTML = '<b>Computer chose paper</b>';
         msg3.innerHTML = "<b>User WON!</b>";
         
     } else {
