@@ -2,6 +2,8 @@ body {
     text-align: center;
 }
 
-.item {
-    border: 1px solid;
+#scoreboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
 }
