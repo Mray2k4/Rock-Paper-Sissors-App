@@ -21,12 +21,11 @@ let msg2 = document.getElementById('message2');
 let msg3 = document.getElementById('message3');
 
 let userChoice = 2;
-let userScore = 0; 
-let compScore = 0;
 
 const scoreUser = document.getElementById('userScore');
 const scoreComp = document.getElementById('compScore')
-let score = 0;
+let scoreU = 0;
+let scoreC = 0
 
 rock.addEventListener('click', function() {
     msg1.innerHTML = '<b>User picked rock</b>';
@@ -35,13 +34,13 @@ rock.addEventListener('click', function() {
         msg2.innerHTML = '<b>Computer chose rock</b>';
         msg3.innerHTML = "<b>It's a TIE!</b>";
     } else if(userChoice > answer){
-        score += 1;
-       scoreUser.innerHTML = score;
+       scoreU += 1;
+       scoreUser.innerHTML = scoreU;
        msg2.innerHTML = '<b>Computer chose sissors</b>';
        msg3.innerHTML = "<b>User WON!</b>";
     } else {
-       score += 1;
-       scoreComp.innerHTML = score;
+       scoreC += 1;
+       scoreComp.innerHTML = scoreC;
        msg2.innerHTML = '<b>Computer chose paper</b>';
        msg3.innerHTML = "<b>Computer WON!</b>";
     }
@@ -54,13 +53,13 @@ paper.addEventListener('click', function() {
         msg2.innerHTML = '<b>Computer chose paper</b>';
         msg3.innerHTML = "<b>It's a TIE!</b>";
     } else if(userChoice > answer){
-        score += 1;
-       scoreUser.innerHTML = score;
+       scoreU += 1;
+       scoreUser.innerHTML = scoreU;
        msg2.innerHTML = "<b>Computer chose rock</b>";
        msg3.innerHTML = "<b>User WON!</b>";
     } else {
-       score += 1;
-       scoreComp.innerHTML = score;
+       scoreC += 1;
+       scoreComp.innerHTML = scoreC;
        msg2.innerHTML = '<b>Computer chose sissors</b>';
        msg3.innerHTML = "<b>Computer WON!</b>";
     } 
@@ -73,18 +72,16 @@ sissors.addEventListener('click', function() {
         msg2.innerHTML = '<b>Computer chose sissors</b>';
         msg3.innerHTML = "<b>It's a TIE!</b>";
     } else if(userChoice > answer){
-        score += 1;
-        scoreUser.innerHTML = score;
+        scoreU += 1;
+        scoreUser.innerHTML = scoreU;
         msg2.innerHTML = '<b>Computer chose paper</b>';
         msg3.innerHTML = "<b>User WON!</b>";
     } else {
-        score += 1;
-        scoreComp.innerHTML = score;
+        scoreC += 1;
+        scoreComp.innerHTML = scoreC;
         msg2.innerHTML = '<b>Computer chose rock</b>';
         msg3.innerHTML = "<b>Computer WON!</b>";
     }
-
-
 });
 
 
